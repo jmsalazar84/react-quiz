@@ -1,0 +1,72 @@
+@import '../../common/styles/input';
+@import '../../common/styles/button';
+
+.Home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    font-size: large;
+  }
+
+  input {
+    @extend %input;
+  }
+}
+
+.msgError {
+  color: #f44336;
+  font-weight: bold;
+  padding: 1em;
+}
+
+.World {
+  background-image: url('https://d35aaqx5ub95lt.cloudfront.net/images/331a32943ff73be28537dfc7469d5639.svg');
+  background-size: 192px;
+  height: 192px;
+  width: 192px;
+}
+
+.Layout {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+  left: 0;
+  min-height: 460px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+}
+
+.Header {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.Content {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1em;
+}
+
+.Footer {
+  border-top: 2px solid #e5e5e5;
+  grid-column: 1;
+  grid-row: 3;
+  max-height: 140px;
+  padding: 0.5em 1em;
+}
+
+.PrimaryButton {
+  @extend %primary-button;
+}

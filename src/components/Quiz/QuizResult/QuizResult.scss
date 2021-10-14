@@ -1,0 +1,68 @@
+.quizResult {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  height: 100%;
+  left: 0;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.content {
+  margin: 0;
+  text-align: center;
+
+
+  h1 {
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  b {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1.8em;
+  }
+    
+  button {
+        
+    border-radius: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding: 1em;
+    transition: filter 0.2s;
+  }
+}
+
+.wrong {
+  background-color: rgba(255, 223, 224, 0.8);
+  color: #ea2b2b;
+
+  h1 {
+    color: #ea2b2b;
+  }
+
+  button {
+    background-color: #ff4b4b;
+    border: 1px solid #ea2b2b;
+  }
+}
+
+.success {
+  background-color: rgba(215, 255, 184, 0.8);
+
+  h1 {
+    color: #58a700;
+  }
+
+  button {
+    background-color: #58cc02;
+    border: 1px solid #58a700;
+  }
+}
+

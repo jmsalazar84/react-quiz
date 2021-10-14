@@ -1,0 +1,5 @@
+schema: ${REACT_APP_API_URL}
+generates:
+  ./src/types.d.ts:
+    plugins:
+      - typescript

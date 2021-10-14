@@ -1,0 +1,29 @@
+.header {
+  background-color: #512da8;
+  color: #fff;
+  display: flex;
+  width: 100%;
+}
+
+.title {
+  flex: 0 1 30%;
+  font-weight: bold;
+  padding: 1em 2em;
+  text-align-last: left;
+  white-space: nowrap;
+}
+
+.links {
+  flex: 0 1 70%;
+  padding: 1em 2em;
+  text-align-last: right;
+  white-space: nowrap;
+
+  a {
+    color: #fff;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+}

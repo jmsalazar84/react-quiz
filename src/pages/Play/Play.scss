@@ -1,0 +1,58 @@
+@import '../../common/styles/button';
+
+.layout {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+  left: 0;
+  min-height: 460px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+}
+
+.header {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.content {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1em;
+}
+
+.footer {
+  border-top: 2px solid #e5e5e5;
+  grid-column: 1;
+  grid-row: 3;
+  max-height: 80px;
+}
+
+.bottomBar {
+  align-items: center;
+  align-items: center;
+  display: grid;
+  justify-content: space-between;
+  justify-items: stretch;
+  min-height: 80px;
+  padding: 0 1em;
+
+  div:nth-child(1) {
+    grid-column: auto/2;
+    justify-self: start;
+  }
+
+  div:nth-child(2) {
+    grid-column: 5 / auto;
+    justify-self: end;
+  }
+}
+
+
+.PrimaryButton {
+  @extend %primary-button;
+}

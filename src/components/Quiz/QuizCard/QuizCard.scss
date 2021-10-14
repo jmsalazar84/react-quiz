@@ -1,0 +1,65 @@
+.card {
+  align-items: center;
+  border-radius: 30px;
+  display: grid;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.question {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  grid-column: 1;
+  grid-row: 1;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+}
+
+.alternatives {
+  column-gap: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-column: 1;
+  grid-row: 2;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  row-gap: 1em;
+  width: 100%;
+
+  li {
+    align-self: flex-start;
+    border-color: #bdbdbd;
+    border-radius: 1em;
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 1px;
+    flex: 1 1 100%;
+    font-weight: bold;
+    padding: 1em 2em;
+  }
+
+  li:hover {
+    background-color: #ffeb3b;
+    cursor: pointer;
+  }
+}
+
+.step {
+  grid-column: 1;
+  grid-row: 3;
+  text-align: center;
+}
+
+.selected {
+  background-color: #ff9800;
+}
+
+.unselected {
+  background-color: #fff;
+}
