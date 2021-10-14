@@ -5,12 +5,12 @@ import { Redirect } from 'react-router';
 import { useQuery } from '@apollo/client';
 import { Query } from 'src/types';
 import { GET_CONTINENTS_AND_COUNTRIES } from '../../graphql';
-import { genQuiz, QuizQuestion } from '../../common/services/Questions/genCountryInContinent';
+import { genQuiz, QuizQuestion } from '../../services/Questions/genCountryInContinent';
 
 import style from './Play.scss';
 import { useLocalStorage } from '@hooks/useLocalStorage';
 import { Board } from '../../common/interfaces/Board';
-import { updateLeaderboard } from '../../common/services/Leaderboard/updateLeaderboard';
+import { updateLeaderboard } from '../../services/Leaderboard/updateLeaderboard';
 import QuizResult from '@components/Quiz/QuizResult';
 import Header from '@components/Header';
 

@@ -1,4 +1,4 @@
-import { Board } from '../../interfaces/Board';
+import { Board } from '../../common/interfaces/Board';
 
 export const updateLeaderboard = (leaderboard: Board[], data: Board): Board[] => {
   

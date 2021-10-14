@@ -19,6 +19,7 @@
       "@hooks/*": ["src/hooks/*"],
       "@routes/*": ["src/routes/"],
       "@pages/*": ["src/pages/*"],
+      "@services/*": ["src/services/*"],
       "@common/*": ["src/common/*"],
       "@utils/*": ["src/utils/*"],
     },

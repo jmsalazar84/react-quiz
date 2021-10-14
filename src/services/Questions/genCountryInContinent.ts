@@ -1,5 +1,5 @@
 import { Continent, Country } from 'src/types';
-import { shuffle, randomIntFromInterval } from '../../../utils';
+import { shuffle, randomIntFromInterval } from '../../utils';
 
 export interface QuizQuestion {
   question: string;
@@ -9,17 +9,15 @@ export interface QuizQuestion {
   alternatives: string[];
 }
 
-
 export const genCountryInContinent = (countries: Country[], continents: Continent[]): QuizQuestion | undefined => {
   if (countries.length === 0 || continents.length === 0) {
     return undefined;
   }
-  const continentIndex = randomIntFromInterval(0, continents.length -1);
+  const continentIndex = randomIntFromInterval(0, continents.length - 1);
   const continent = continents[continentIndex];
-  
 
   const validCountries = countries.filter((country) => country.continent.code === continent.code);
-  const validCountryIndex = randomIntFromInterval(0, validCountries.length -1 );
+  const validCountryIndex = randomIntFromInterval(0, validCountries.length - 1);
   const validCountry = validCountries[validCountryIndex];
 
   const invalidCountries = shuffle<Country>(
@@ -29,7 +27,7 @@ export const genCountryInContinent = (countries: Country[], continents: Continen
   const question = `Which country is in ${continent.name}?`;
   const correctAnswer = validCountry.name;
   const incorrectAnswers = invalidCountries.map((country) => country.name);
-  const alternatives = shuffle<string>([correctAnswer,... incorrectAnswers]);
+  const alternatives = shuffle<string>([correctAnswer, ...incorrectAnswers]);
   return {
     question,
     points: 1,
@@ -38,7 +36,6 @@ export const genCountryInContinent = (countries: Country[], continents: Continen
     alternatives,
   };
 };
-
 
 export const genQuiz = (countries: Country[], continents: Continent[]): QuizQuestion | undefined => {
   return genCountryInContinent(countries, continents);
