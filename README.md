@@ -18,7 +18,11 @@ It's a demo app using React with Typescript, Sass, Jest and other stuffs!
 
 `npm install`
 
-3. Run local environment.
+3. Configure environment.
+
+`cp .env.example .env`
+
+4. Run local environment.
 
 `npm start`
 
@@ -57,4 +61,3 @@ It's a demo app using React with Typescript, Sass, Jest and other stuffs!
 - [Husky](https://github.com/typicode/husky)
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
-
