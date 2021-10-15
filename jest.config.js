@@ -3,6 +3,7 @@ module.exports = {
   moduleNameMapper: {
     '\\.scss$': 'identity-obj-proxy',
     '^@components/(.*)$': '<rootDir>/src/components/$1',
+    '^@common/(.*)$': '<rootDir>/src/common/$1',
     '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
     '^@pages/(.*)$': '<rootDir>/src/pages/$1',
     '^@routes/(.*)$': '<rootDir>/src/routes/$1',
@@ -10,9 +11,10 @@ module.exports = {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
   },
   collectCoverageFrom: [
-    '<rootDir>/**/*.{ts, tsx}',
+    '<rootDir>/src/**/*.{ts, tsx}',
     '!<rootDir>/src/**/*.d.ts',
     '!<rootDir>/src/graphql.ts',
+    '!<rootDir>/common/interfaces/*',
   ],
   roots: ['<rootDir>'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|tsx)$',

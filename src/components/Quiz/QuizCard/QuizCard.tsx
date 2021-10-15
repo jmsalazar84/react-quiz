@@ -1,4 +1,4 @@
-import { QuizQuestion } from 'src/services/Questions/genCountryInContinent';
+import { QuizQuestion } from '@common/interfaces';
 import React, { useState } from 'react';
 import style from './QuizCard.scss';
 

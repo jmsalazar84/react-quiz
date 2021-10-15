@@ -1,8 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { Redirect } from 'react-router';
 import { useLocalStorage } from '@hooks/index';
-import style from './Home.scss';
+import { useQuery } from '@apollo/client';
 import { config } from '../../configs';
+import { Continent, Country, Query } from '../../types';
+import { GET_CONTINENTS_AND_COUNTRIES } from '../../graphql';
+import style from './Home.scss';
 
 export const Home: React.FC = (): JSX.Element => {
   const [redirect, setRedirect] = useState(null);
@@ -10,6 +13,16 @@ export const Home: React.FC = (): JSX.Element => {
   const [score, setScore] = useLocalStorage('score', 0);
   const [currentQuestion, setCurrentQuestion] = useLocalStorage('currentQuestion', 1);
   const [error, setError] = useState('');
+  const [countries, setCountries] = useLocalStorage<Country[]>('countries', []);
+  const [continents, setContinents] = useLocalStorage<Continent[]>('continents', []);
+
+  useQuery<Query>(GET_CONTINENTS_AND_COUNTRIES, {
+    onCompleted: (data) => {
+      setContinents(data.continents);
+      setCountries(data.countries);
+    },
+    fetchPolicy: 'cache-first',
+  });
 
   const domRef = {
     nickname: useRef<HTMLInputElement>(),

@@ -1,15 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import style from './Header.scss';
 
 export interface HeaderProps {
   title: string;
-  links: { link: string; text: string }[];
+  links: { link: string; text: string; onClick?: () => void }[];
 }
 
 export const Header: React.FC<HeaderProps> = ({ title, links }: HeaderProps): JSX.Element => {
   const items = links.map((item, index) => (
-    <a href={item.link} key={index}>
+    <a href={item.link} key={index} onClick={item.onClick}>
       {item.text}
     </a>
   ));

@@ -9,6 +9,7 @@ export const GET_CONTINENTS_AND_COUNTRIES = gql`
     countries {
       code
       name
+      capital
       continent {
         code
         name

@@ -1,6 +1,6 @@
+import { QuizQuestion } from '@common/interfaces';
 import React from 'react';
 import style from './QuizResult.scss';
-import { QuizQuestion } from 'src/services/Questions/genCountryInContinent';
 
 interface QuizResultProps {
   quiz: QuizQuestion;
